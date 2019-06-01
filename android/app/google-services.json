@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1010795454003-3dlr3q13hm7lsitciq80jg8dh0gbvtvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hackathon.flutterstark.flutter_stark_hackathon",
+            "certificate_hash": "cfcd764de83ea69cdbfe11eb69677d33986bd6b5"
+          }
+        },
+        {
           "client_id": "1010795454003-51rdkodk4c2i50303k2e6pu4238u04df.apps.googleusercontent.com",
           "client_type": 3
         }

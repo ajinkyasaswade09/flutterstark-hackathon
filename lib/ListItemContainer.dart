@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hackathon/ChatMainScreen.dart';
-import 'package:flutter_hackathon/Utils/Constants.dart';
-import 'package:flutter_hackathon/Utils/text_style.dart';
+//import 'package:flutter_hackathon/ChatMainScreen.dart';
+//import 'package:flutter_hackathon/Utils/Constants.dart';
+//import 'package:flutter_hackathon/Utils/text_style.dart';
+
+import 'ChatMainScreen.dart';
+import 'Utils/Constants.dart';
+import 'Utils/text_style.dart';
 
 class ListItemContainer extends StatefulWidget {
   @override

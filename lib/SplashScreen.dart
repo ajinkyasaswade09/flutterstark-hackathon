@@ -1,10 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hackathon/LoginScreen.dart';
-import 'package:flutter_hackathon/Utils/Constants.dart';
-import 'package:flutter_hackathon/Utils/CustomPainter.dart';
-import 'package:flutter_hackathon/Utils/text_style.dart';
+
+import 'LoginScreen.dart';
+import 'Utils/Constants.dart';
+import 'Utils/CustomPainter.dart';
+import 'Utils/text_style.dart';
 
 class SplashScreen extends StatelessWidget {
   BuildContext mContext;

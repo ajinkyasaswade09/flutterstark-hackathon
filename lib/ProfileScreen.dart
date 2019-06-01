@@ -1,11 +1,12 @@
 import 'dart:io';
-import 'package:flutter_hackathon/Utils/CustomPainter.dart';
-import 'package:flutter_hackathon/Utils/SizeConfig.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hackathon/Utils/Constants.dart';
-import 'package:flutter_hackathon/Utils/text_style.dart';
+
+import 'Utils/Constants.dart';
+import 'Utils/CustomPainter.dart';
+import 'Utils/SizeConfig.dart';
+import 'Utils/text_style.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
