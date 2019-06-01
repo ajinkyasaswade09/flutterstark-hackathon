@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'ChatListScreen.dart';
+import 'LoginScreen.dart';
 import 'data/users_repo.dart';
 import 'data/messages_repo.dart';
+import 'model/users.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  var usersRepo;
   @override
   Widget build(BuildContext context) {
-    var usersRepo = new UsersRepo();
-    usersRepo.fetchUsers().then((users) {
+    usersRepo = new UsersRepo();
+
+
+   /* usersRepo.fetchUsers().then((users) {
       print('From main ' + users.name);
       print('From main ' + users.photoUrl);
-    });
+    });*/
 
-    usersRepo.addUser();
+    //usersRepo.addUser();
 
     var messagesRepo = new MessagesRepo();
     messagesRepo.fetchMessages().then((messgaes) {
@@ -22,7 +28,7 @@ class MyApp extends StatelessWidget {
       print('From main ' + messgaes.idTo);
     });
 
-    messagesRepo.addMessage();
+//    messagesRepo.addMessage();
 
     return MaterialApp(
       title: 'Flutter Demo',
@@ -38,9 +44,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LoginScreen(),
     );
   }
+
 }
 
 class MyHomePage extends StatefulWidget {
@@ -126,4 +133,5 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+
 }

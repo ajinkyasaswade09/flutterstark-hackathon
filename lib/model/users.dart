@@ -10,10 +10,7 @@ class Users {
   Users(this.name, this.photoUrl, this.userId, this.documentReference);
 
   Users.fromMap(Map<String, dynamic> map, {this.documentReference})
-      : assert(map['user_id'] != null),
-        assert(map['name'] != null),
-        assert(map['photo_url'] != null),
-        userId = map['user_id'],
+      : userId = map['user_id'],
         name = map['name'],
         photoUrl = map['photo_url'];
 

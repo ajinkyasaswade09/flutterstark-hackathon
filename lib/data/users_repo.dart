@@ -3,16 +3,20 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../model/users.dart';
 
 class UsersRepo {
-  Future<Users> fetchUsers() async {
+  List<Users> usersList;
+
+  Future<List<Users>> fetchUsers() async {
     CollectionReference reference = Firestore.instance.collection('users');
     QuerySnapshot querySnapshot = await reference.getDocuments();
+    print('Length ' + querySnapshot.documents.length.toString());
 
     for (DocumentSnapshot docSnapshot in querySnapshot.documents) {
       Users users = Users.fromSnapShot(docSnapshot);
       print(users.name);
       print(users.photoUrl);
-      return users;
+      usersList.add(users);
     }
+    return usersList;
   }
 
   addUser() async {
@@ -23,5 +27,19 @@ class UsersRepo {
     };
     var reference = Firestore.instance.collection('users').reference();
     reference.add(map);
+  }
+
+  List<Users> getUserList() {
+    List<Users> usersList = new List();
+    fetchUsers().then((userList) {
+      print('From main ' + userList[0].name);
+      print('From main ' + userList[0].photoUrl);
+      usersList.addAll(userList);
+    });
+    return usersList;
+  }
+
+  UsersRepo() {
+    usersList = new List();
   }
 }
