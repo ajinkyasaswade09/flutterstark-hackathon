@@ -14,4 +14,14 @@ class UsersRepo {
       return users;
     }
   }
+
+  addUser() async {
+    Map<String, dynamic> map = {
+      'user_id': '1234567',
+      'name': 'Name from Code',
+      'photo_url': 'https://randomuser.me/api/portraits/women/81.jpg'
+    };
+    var reference = Firestore.instance.collection('users').reference();
+    reference.add(map);
+  }
 }

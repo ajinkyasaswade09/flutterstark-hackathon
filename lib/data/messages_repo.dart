@@ -14,4 +14,15 @@ class MessagesRepo {
       return messages;
     }
   }
+
+  addMessage() async {
+    Map<String, dynamic> map = {
+      'content': 'Hello Flutter From Dart',
+      'id_from': '974',
+      'id_to': '82937',
+      'timestamp': '3247987982348',
+    };
+    var reference = Firestore.instance.collection('messages').reference();
+    reference.add(map);
+  }
 }

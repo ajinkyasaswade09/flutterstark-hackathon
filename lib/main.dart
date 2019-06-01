@@ -8,17 +8,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var usersRepo = new UsersRepo().fetchUsers();
-    usersRepo.then((users) {
+    var usersRepo = new UsersRepo();
+    usersRepo.fetchUsers().then((users) {
       print('From main ' + users.name);
       print('From main ' + users.photoUrl);
     });
 
-    var messagesRepo = new MessagesRepo().fetchMessages();
-    messagesRepo.then((messgaes) {
+    usersRepo.addUser();
+
+    var messagesRepo = new MessagesRepo();
+    messagesRepo.fetchMessages().then((messgaes) {
       print('From main ' + messgaes.content);
       print('From main ' + messgaes.idTo);
     });
+
+    messagesRepo.addMessage();
 
     return MaterialApp(
       title: 'Flutter Demo',
