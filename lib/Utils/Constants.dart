@@ -17,3 +17,10 @@ const password = "Password";
 // Screen Names
 
 const chatListScreen = "Chats";
+const profileScreen = "Profile";
+
+//Sign Up
+const selectImage = "Select Image";
+const selectImageMessage = "Pick an image from Gallery or Camera.";
+const galleryText = "Gallery";
+const cameraText = "Camera";

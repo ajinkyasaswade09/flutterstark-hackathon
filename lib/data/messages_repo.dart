@@ -23,12 +23,13 @@ class MessagesRepo {
     }*/
   }
 
-  addMessage() async {
+  addMessage(
+      String comment, String idFrom, String idTo, String timeStamp) async {
     Map<String, dynamic> map = {
-      'content': 'Hello Flutter From Dart',
-      'id_from': '974',
-      'id_to': '82937',
-      'timestamp': '3247987982348',
+      'content': comment,
+      'id_from': idFrom,
+      'id_to': idTo,
+      'timestamp': timeStamp,
     };
     var reference = Firestore.instance.collection('messages').reference();
     reference.add(map);

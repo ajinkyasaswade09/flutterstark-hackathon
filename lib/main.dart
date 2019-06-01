@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'ChatListScreen.dart';
+import 'package:flutter_stark_hackathon/SplashScreen.dart';
 import 'LoginScreen.dart';
-import 'data/users_repo.dart';
-import 'data/messages_repo.dart';
-import 'model/users.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+    ));
 
-class MyApp extends StatelessWidget {
+/*class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   var usersRepo;
   @override
@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
     usersRepo = new UsersRepo();
 
 
-   /* usersRepo.fetchUsers().then((users) {
+   */ /* usersRepo.fetchUsers().then((users) {
       print('From main ' + users.name);
       print('From main ' + users.photoUrl);
-    });*/
+    });*/ /*
 
     //usersRepo.addUser();
 
@@ -134,4 +134,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-}
+}*/
