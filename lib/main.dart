@@ -7,29 +7,12 @@ void main() => runApp(MaterialApp(
       home: SplashScreen(),
     ));
 
-/*class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   var usersRepo;
+
   @override
   Widget build(BuildContext context) {
-    usersRepo = new UsersRepo();
-
-
-   */ /* usersRepo.fetchUsers().then((users) {
-      print('From main ' + users.name);
-      print('From main ' + users.photoUrl);
-    });*/ /*
-
-    //usersRepo.addUser();
-
-    var messagesRepo = new MessagesRepo();
-    messagesRepo.fetchMessages().then((messgaes) {
-      print('From main ' + messgaes.content);
-      print('From main ' + messgaes.idTo);
-    });
-
-//    messagesRepo.addMessage();
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -47,10 +30,9 @@ void main() => runApp(MaterialApp(
       home: LoginScreen(),
     );
   }
-
 }
 
-class MyHomePage extends StatefulWidget {
+/*class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -66,9 +48,9 @@ class MyHomePage extends StatefulWidget {
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
-}
+}*/
 
-class _MyHomePageState extends State<MyHomePage> {
+/*class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
